@@ -1,0 +1,11 @@
+pandas
+langchain_ollama
+ollama
+jsondiff
+langchain_chroma
+langchain_core
+scikit-learn
+requests
+pysqlite3
+import-ipynb
+mininet
