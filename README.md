@@ -3,15 +3,12 @@ NetIntent: Leveraging Large Language Models for End-to-End Intent-Based SDN Auto
 
 # How to install the dependencies
 Run this command in your terminal in the directory containing requirement.txt:
-
-```bash
+```
 pip install -r requirement.txt
-
+```
 # How to download LLMs
-
-```markdown
-```bash
-MODELS=( "llama3.3" "llama2:70b" "codellama:70b") #here, put the model names in the shown format
+```
+MODELS=( "llama3.3" "llama2:70b" "codellama:70b") #put your desired model names with parameter size as shown
 for MODEL in "${MODELS[@]}"; do
   echo "Downloading model: $MODEL"
   while true; do
@@ -24,3 +21,15 @@ for MODEL in "${MODELS[@]}"; do
     fi
   done
 done
+```
+# How to strat Ollama server for handling LLM
+```
+#run the following commands in linux terminal
+#RUN OLLAMA SERVER (use two gpu)
+CUDA_VISIBLE_DEVICES=0 OLLAMA_HOST=0.0.0.0:11434 ollama serve
+CUDA_VISIBLE_DEVICES=1 OLLAMA_HOST=0.0.0.0:11435 ollama serve
+
+#RUN OLLAMA SERVER (use one gpu)
+CUDA_VISIBLE_DEVICES=0 OLLAMA_HOST=0.0.0.0:11434 ollama serve
+CUDA_VISIBLE_DEVICES=0 OLLAMA_HOST=0.0.0.0:11435 ollama serve
+```
