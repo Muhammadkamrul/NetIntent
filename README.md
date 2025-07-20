@@ -92,5 +92,67 @@ http://10.23.7.63:8181/index.html
 default credentials admin/admin.
 ```
 # ONOS
+```
+#Download and start onos using the linxt terminal commands: 
+
+cd Download
+sudo wget -c https://repo1.maven.org/maven2/org/onosproject/onos-releases/2.0.0/onos-2.0.0.tar.gz
+tar zxvf onos-2.x.x.tar.gz
+
+#Copy files in folder to /opt/onos:
+
+sudo mkdir /opt/onos 
+sudo cp -r onos-2.0.0/* /opt/onos
+
+#Run onos services:
+
+cd /opt/onos/bin
+sudo /opt/onos/bin/onos-service start
+
+#install onos features:
+#open another terminal and run the following command:
+#naviagte to:
+
+/opt/onos/bin
+
+#the type:
+
+/opt/onos/bin/onos -l onos
+
+#type password: rocks
+
+#install the following features:
+
+/opt/onos/bin$ app activate org.onosproject.pipelines.basic
+/opt/onos/bin$ app activate org.onosproject.fwd
+/opt/onos/bin$ app activate org.onosproject.openflow
+
+#open ONOS UI:
+(note: if you have both ODL and ONOS installed in the same host computer, then you must change the UI port for either ODL or ONOS. For example, the ONOS UI port can be changed to 8182. Also, it is necessary to change the openflow port number for either ODL or ONOS.)
+
+open browser:
+http://10.23.7.63:8182/onos/ui/login.html
+
+username: onos
+password: rocks
+```
+# Installing Mininet
+```
+#clone the latest code for the 2.3.1b4 version:
+
+git clone https://github.com/mininet/mininet.git
+cd mininet
+git checkout 2.3.1b4
+sudo ./util/install.sh -a
+mn --version
+```
+# Starting Mininet with the diamond topology
+```
+#open a linux terminal and type the following command. Ensure the correct python file for ODL/ONOS:
+
+sudo python diamond_topology.py
+```
+
+
 
 
