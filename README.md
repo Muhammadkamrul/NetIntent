@@ -22,7 +22,7 @@ for MODEL in "${MODELS[@]}"; do
   done
 done
 ```
-# How to strat Ollama server for handling LLM
+# How to start Ollama server for handling LLM
 ```
 #run the following commands in linux terminal
 #RUN OLLAMA SERVER (use two gpu)
