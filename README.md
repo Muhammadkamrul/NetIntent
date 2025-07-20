@@ -10,6 +10,12 @@ Run this command in your linux terminal in the directory containing requirement.
 ```
 pip install -r requirement.txt
 ```
+
+The version we used:
+
+Python Version: 3.10.15, Pytorch Version: 2.5.1, CUDA Version: 11.8.89
+
+
 # How to download LLMs
 ```
 MODELS=( "llama3.3" "llama2:70b" "codellama:70b") #put your desired model names with parameter size as shown
