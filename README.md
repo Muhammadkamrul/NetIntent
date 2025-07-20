@@ -9,6 +9,7 @@ pip install -r requirement.txt
 
 # How to download LLMs
 
+```markdown
 ```bash
 MODELS=( "llama3.3" "llama2:70b" "codellama:70b") #here, put the model names in the shown format
 for MODEL in "${MODELS[@]}"; do
