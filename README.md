@@ -34,7 +34,7 @@ done
 ```
 # How to start Ollama server for handling LLM
 ```
-#run the following commands in linux terminal
+#run the following commands in linux terminal to run ollama_embedding and ollama_server:
 #RUN OLLAMA SERVER (use two gpu)
 CUDA_VISIBLE_DEVICES=0 OLLAMA_HOST=0.0.0.0:11434 ollama serve
 CUDA_VISIBLE_DEVICES=1 OLLAMA_HOST=0.0.0.0:11435 ollama serve
@@ -43,6 +43,20 @@ CUDA_VISIBLE_DEVICES=1 OLLAMA_HOST=0.0.0.0:11435 ollama serve
 CUDA_VISIBLE_DEVICES=0 OLLAMA_HOST=0.0.0.0:11434 ollama serve
 CUDA_VISIBLE_DEVICES=0 OLLAMA_HOST=0.0.0.0:11435 ollama serve
 ```
+# How to run the benchmarking codes
+```
+navigate to Benchmarking Codes folder.
+
+Formal_specification_and_NFV_configuration_Benchmarking.ipynb is based on existing datasets (Formal_specification_and_NFV_configuration).
+FlowConflict-ODL_Benchmarking.ipynb is based on proposed FlowConflict-ODL dataset.
+FlowConflict-ONOS_Benchmarking.ipynb is based on proposed FlowConflict-ONOS dataset.
+Intent2Flow-ODL_Benchmarking.ipynb is based on proposed Intent2Flow-ODL dataset.
+Intent2Flow-ONOS_Benchmarking.ipynb is based on proposed Intent2Flow-ONOS dataset.
+
+Open a file in jupyter notebook. Make sure the dataset path is correcly set and Ollama server is running. Run the code ans wait for the results to be written in CSV file. It takes several hours to generate the results for all LLMs.
+
+```
+
 # End to End IBN
 # Install ODL and ONOS SDN controllers
 # ODL
@@ -157,6 +171,21 @@ mn --version
 #open a linux terminal and type the following command. Ensure the correct python file for ODL/ONOS:
 
 sudo python diamond_topology.py
+```
+# How to run the END-to-END IBN codes
+# ONOS
+```
+navigate to ODL or ONOS folder.
+
+ONOS_End-to_End_IBN_Main.ipynb file is the main file for running the NetIntent on ONOS SDN controller.
+
+Open the file in jupyter notebook. Make sure the Ollama server is running. Also, you need to provide the host PC's user account password in the variable 'sudo_password' so that the script can execute mininet commands to install flow rules in the SDN controller. Cross check 'ip_to_host' variable values with the defined values in the 'diamond_topology.py' file.
+
+ONOS_End-to_End_IBN_Functions.ipynb file is the helper file for running the NetIntent on ONOS SDN controller. Here, make sure 'ONOS_BASE_URL' variable is set to correct ONOS path for using the Rest API, especially the UI port number. The IP here is the local ip. Even localhost can be used instead of IP address. Besides, you need to provide the host PC's user account password in the variable 'sudo_password'. You can change the LLM used for translation and conflict detection using the variables 'my_models_translate' and 'my_models_conflict'. Make sure the model names are correctly written. The model name depends on how it is saved by Ollama in the host PC. The variable 'context_examples' can be modified to meet desired accuracy as more context example helps achieved better accuracy, but with increased latency. The 'default_model' variable uses a model name to do the embeddings to ensure that all similarity calculations are reliable while selecting context examples. It is not used for translation or conflict detection. Make sure the Intent2Flow dataset path is correcly set in variable 'custom_dataset'.
+
+
+
+
 ```
 
 
