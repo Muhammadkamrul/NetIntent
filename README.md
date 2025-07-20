@@ -1,8 +1,9 @@
-# NetIntent
-NetIntent: Leveraging Large Language Models for End-to-End Intent-Based SDN Automation
+# NetIntent: Leveraging Large Language Models for End-to-End Intent-Based SDN Automation
+
+# Benchmarking
 
 # How to install the dependencies
-Run this command in your terminal in the directory containing requirement.txt:
+Run this command in your linux terminal in the directory containing requirement.txt:
 ```
 pip install -r requirement.txt
 ```
@@ -33,3 +34,57 @@ CUDA_VISIBLE_DEVICES=1 OLLAMA_HOST=0.0.0.0:11435 ollama serve
 CUDA_VISIBLE_DEVICES=0 OLLAMA_HOST=0.0.0.0:11434 ollama serve
 CUDA_VISIBLE_DEVICES=0 OLLAMA_HOST=0.0.0.0:11435 ollama serve
 ```
+# End to End IBN
+# Install ODL and ONOS SDN controllers
+# ODL
+```
+First, install JAVA
+Java download command:
+
+sudo apt-get install openjdk-8-jre
+
+Verify installed java version:
+
+sudo update-alternatives --display java
+
+Verify:
+
+java -version
+
+Check Environment Variables:
+echo $JAVA_HOME
+
+Update JAVA_HOME:
+
+nano ~/.bashrc
+
+Add or replace these lines:
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+
+Save and Reload Bashrc:
+
+source ~/.bashrc
+
+Verify:
+java -version
+
+
+Now download and run the OpenDaylight SDN controller:
+
+sudo wget https://nexus.opendaylight.org/content/repositories/opendaylight.release/org/opendaylight/integration/karaf/0.8.4/karaf-0.8.4.zip
+unzip karaf
+cd karaf/bin
+sudo ./karaf
+
+nstalling Futures for ODL:
+feature:install odl-restconf odl-l2switch-switch odl-mdsal-apidocs odl-dlux-core odl-l2switch-switch-ui
+
+Run ODL UI:
+(note: use ifconfig command to find the ip)
+
+open in browser:
+http://10.23.7.63:8181/index.html
+default credentials admin/admin.
+
