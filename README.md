@@ -21,7 +21,46 @@ Python Version: 3.10.15, Pytorch Version: 2.5.1, CUDA Version: 11.8.89
 copy and paste this following code in your jupyter notebook cell:
 
 %%bash
-MODELS=("qwq")
+
+MODELS=(
+"huihui_ai/qwq-abliterated"
+"huihui_ai/qwq-fusion"
+"qwq"
+"marco-o1"
+"mistral"
+"mistral-nemo"
+"deepseek-coder"
+"starcoder"
+"codegemma"
+"starcoder2"
+"openchat"
+"phi3"
+"dolphin-mistral"
+"wizardlm2"
+"phi"
+"yi"
+"zephyr"
+"command-r"
+"llava-llama3"
+"codestral"
+"codellama:34b"
+"codellama"
+"llama2"
+"llama3"
+"llama3.1"
+"llama3.2"
+"qwen"
+"qwen2"
+"qwen2.5"
+"gemma2:27b"
+"Deepseek-coder-v2:16b"
+"TinyLlama:1.1b"
+"Orca-mini:3b"
+"llama3.3"
+"llama2:70b"
+"codellama:70b"
+)
+
 for MODEL in "${MODELS[@]}"; do
   echo "Downloading model: $MODEL"
   while true; do
