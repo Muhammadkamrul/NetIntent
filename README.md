@@ -18,7 +18,7 @@ Python Version: 3.10.15, Pytorch Version: 2.5.1, CUDA Version: 11.8.89
 
 # How to download LLMs
 ```
-copy and paste this following code in your jupyter notebook cell:
+copy and paste this following code in your jupyter notebook cell. If the code output shows that a model is not found, kindly verify the correct model name from "https://ollama.com/library":
 
 %%bash
 
