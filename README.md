@@ -13,8 +13,7 @@ pip install -r requirement.txt
 
 The version we used:
 
-Python Version: 3.10.15, Pytorch Version: 2.5.1, CUDA Version: 11.8.89
-
+Python Version: 3.10.15, Pytorch Version: 2.5.1, CUDA Version: 11.8.89, langchain-chroma: 0.1.4, langchain-core: 0.3.24, langchain-ollama: 0.2.1
 
 # How to download LLMs
 ```
