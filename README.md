@@ -6,9 +6,10 @@ ArXiv paper link: https://doi.org/10.48550/arXiv.2507.14398
 # Benchmarking
 
 # How to install the dependencies
-Run this command in your linux terminal in the directory containing requirement.txt:
+Run these commands in your linux terminal to create a new conda environment named 'odlonos'. Make sure you are in the directory where the 'environment.yml' file is available.
 ```
-pip install -r requirement.txt
+conda env create -f environment.yml
+conda activate odlonos
 ```
 
 The version we used:
