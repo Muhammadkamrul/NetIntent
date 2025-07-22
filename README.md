@@ -246,7 +246,9 @@ from langchain_ollama import OllamaEmbeddings
 with:
 from langchain_community.embeddings import OllamaEmbeddings
 
-Also, update the requirements.txt file and add langchain-community, i.e. install langchain-community.
+Also, install the langchain-community library using the following command:
+
+pip install langchain-community
 
 ```
 
