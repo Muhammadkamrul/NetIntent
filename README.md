@@ -236,9 +236,9 @@ Open the file in jupyter notebook. Make sure the Ollama server is running. Also,
 As you run the script, it will ask for an intent. Type an intent and it will be translated and deployed in the SDN controller switch if there are no errors, such as conflicts. If case of an error, error information will be printed. Some sample intents are available in the script in main function.
 
 ```
-# Note on version of langchain_chroma and langchain_ollama
+# Note on obsolete version of langchain_ollama
 ```
-If you encounter import error due to obsolete libray (OllamaEmbeddings), then:
+If you encounter import error due to obsolete libray for OllamaEmbeddings, then:
 
 replace:
 from langchain_ollama import OllamaEmbeddings
