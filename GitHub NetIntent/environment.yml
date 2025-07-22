@@ -16,6 +16,7 @@ dependencies:
   - pip:
       - langchain-ollama==0.2.1
       - langchain-chroma==0.1.4
+      - langchain-core==0.3.24
       - jsondiff
       - import-ipynb
       - mininet
