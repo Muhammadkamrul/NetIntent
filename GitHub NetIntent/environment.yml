@@ -1,0 +1,22 @@
+name: odlonos
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10.15
+  - pytorch=2.5.1
+  - pytorch-cuda=11.8
+  - pandas
+  - scikit-learn
+  - requests
+  - pysqlite3
+  - pip
+  - pip:
+      - langchain-ollama==0.2.1
+      - langchain-chroma==0.1.4
+      - jsondiff
+      - import-ipynb
+      - mininet
+      - ollama
