@@ -238,9 +238,8 @@ As you run the script, it will ask for an intent. Type an intent and it will be 
 ```
 # Note on version of langchain_chroma and langchain_ollama
 ```
-If you encounter import error due to obsolete libray (langchain_chroma and langchain_ollama), then you can remove the older imports and replace with:
+If you encounter import error due to obsolete libray (OllamaEmbeddings), then you can remove the older import and replace with:
 
-from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import OllamaEmbeddings
 
 Also, update the requirements.txt file to:
