@@ -1,7 +1,7 @@
 # NetIntent: Leveraging Large Language Models for End-to-End Intent-Based SDN Automation
 Submitted to IEEE Open Journal of the Communications Society (OJ-COMS)
 
-ArXiv paper link: 
+ArXiv paper link: https://doi.org/10.48550/arXiv.2507.14398
 
 # Benchmarking
 
