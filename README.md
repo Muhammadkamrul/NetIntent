@@ -99,7 +99,7 @@ Open a file in jupyter notebook. Make sure the dataset path is correcly set and 
 # End to End IBN
 # Install ODL and ONOS SDN controllers
 
-Note: The codes provided assume you have either ONOS or ODL installed, not both. However, if you have both ODL and ONOS installed in the same host computer, then you must change the UI port for either ODL or ONOS. For example, the ONOS UI port can be changed to 8182. Also, it is necessary to change the openflow port number for either ODL or ONOS, for example, one port can be 6654 while the other 6653. Besides, distinct host names and IP addresses are necessary to be used in mininet topology files ("diamond_topology.py") for ODL and ONOS so that same host name or IP are not used in both ODL and ONOS.
+Note: The codes provided assume you have either ONOS or ODL installed, not both. However, if you have both ODL and ONOS installed in the same host computer, then you must change the UI port for either ODL or ONOS. For example, the ONOS UI port can be changed to 8182. Also, it is necessary to change the openflow port numbers in the topology files as well as SDN controller's configuraiton files for either ODL or ONOS, for example, one port can be 6654 while the other 6653. Besides, distinct host names and IP addresses are necessary to be used in mininet topology files ("diamond_topology.py") for ODL and ONOS so that same host name or IP are not used in both ODL and ONOS.
 
 # ODL
 ```
