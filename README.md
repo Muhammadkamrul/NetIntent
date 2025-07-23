@@ -98,6 +98,9 @@ Open a file in jupyter notebook. Make sure the dataset path is correcly set and 
 
 # End to End IBN
 # Install ODL and ONOS SDN controllers
+
+Note: The codes provided assume you have either ONOS or ODL installed, not both. However, if you have both ODL and ONOS installed in the same host computer, then you must change the UI port for either ODL or ONOS. For example, the ONOS UI port can be changed to 8182. Also, it is necessary to change the openflow port number for either ODL or ONOS, for example, one port can be 6654 while the other 6653.
+
 # ODL
 ```
 First, install JAVA
@@ -186,11 +189,10 @@ sudo /opt/onos/bin/onos-service start
 /opt/onos/bin$ app activate org.onosproject.fwd
 /opt/onos/bin$ app activate org.onosproject.openflow
 
-#open ONOS UI:
-(note: if you have both ODL and ONOS installed in the same host computer, then you must change the UI port for either ODL or ONOS. For example, the ONOS UI port can be changed to 8182. Also, it is necessary to change the openflow port number for either ODL or ONOS.)
+Run ONOS UI:
+open browser and use the following link. You can use your IP instead of the localhost:
 
-open browser:
-http://10.23.7.63:8182/onos/ui/login.html
+http://localhost:8181/onos/ui/login.html
 
 username: onos
 password: rocks
