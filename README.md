@@ -238,7 +238,16 @@ Open the file in jupyter notebook. Make sure the Ollama server is running. Also,
 As you run the script, it will ask for an intent. Type an intent and it will be translated and deployed in the SDN controller switch if there are no errors, such as conflicts. If case of an error, error information will be printed. Some sample intents are available in the script in main function.
 
 ```
+# Reference
+```
+Our dataset is free to download. However, please cite our paper accordingly, the bibtext is as follows.
 
-
+@article{hossain2025netintent,
+  title={NetIntent: Leveraging Large Language Models for End-to-End Intent-Based SDN Automation},
+  author={Hossain, Md Kamrul and Aljoby, Walid},
+  journal={arXiv preprint arXiv:2507.14398},
+  year={2025}
+}
+```
 
 
