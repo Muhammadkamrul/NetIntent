@@ -89,8 +89,12 @@ navigate to Benchmarking Codes folder.
 Formal_specification_and_NFV_configuration_Benchmarking.ipynb is based on existing datasets (Formal_specification_and_NFV_configuration).
 FlowConflict-ODL_Benchmarking.ipynb is based on proposed FlowConflict-ODL dataset.
 FlowConflict-ONOS_Benchmarking.ipynb is based on proposed FlowConflict-ONOS dataset.
+FlowConflict-Ryu.ipynb is based on proposed FlowConflict-Ryu dataset.
+FlowConflict-Floodlight_Benchmarking.ipynb is based on proposed FlowConflict-Floodlight dataset.
 Intent2Flow-ODL_Benchmarking.ipynb is based on proposed Intent2Flow-ODL dataset.
 Intent2Flow-ONOS_Benchmarking.ipynb is based on proposed Intent2Flow-ONOS dataset.
+Intent2Flow-Ryu_Benchmarking.ipynb is based on proposed Intent2Flow-Ryu dataset.
+Intent2Flow-Floodlight_Benchmarking.ipynb is based on proposed Intent2Flow-Floodlight dataset.
 
 Open a file in jupyter notebook. Make sure the dataset path is correcly set and Ollama server is running. Run the code ans wait for the results to be written in CSV file. It takes several hours to generate the results for all LLMs.
 
@@ -200,9 +204,43 @@ password: rocks
 ```
 # Ryu
 ```
+# make sure pip is up to date
+pip install --upgrade pip setuptools wheel
+
+# install Ryu (this will pull all dependencies)
+pip install ryu
+
+# verify installation
+ryu-manager --version
+
+#Run with stp
+ryu-manager ryu.app.simple_switch_stp_13 ryu.app.ofctl_rest
+
 ```
 # Floodlight
 ```
+sudo apt update
+sudo apt install -y openjdk-8-jdk maven git
+
+#Get Floodlight
+cd ~
+git clone https://github.com/floodlight/floodlight.git
+cd floodlight
+git submodule update --init --recursive
+ls lib/openflowj-3.3.0-SNAPSHOT.jar   # confirm it exists
+mvn install:install-file \
+  -Dfile=lib/openflowj-3.3.0-SNAPSHOT.jar \
+  -DgroupId=org.projectfloodlight \
+  -DartifactId=openflowj \
+  -Dversion=3.3.0-SNAPSHOT \
+  -Dpackaging=jar \
+  -DgeneratePom=true
+
+mvn -DskipTests -U clean package
+
+#Run Floodlight
+cd ~/floodlight
+java -jar target/floodlight.jar -cf src/main/resources/floodlightdefault.properties
 ```
 # Installing Mininet
 ```
