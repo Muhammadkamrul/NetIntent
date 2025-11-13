@@ -97,7 +97,7 @@ Open a file in jupyter notebook. Make sure the dataset path is correcly set and 
 ```
 
 # End to End IBN
-# Install ODL and ONOS SDN controllers
+# Install ODL, ONOS, Ryu, Floodlight SDN controllers
 
 Note: The codes provided assume you have either ONOS or ODL installed, not both. However, if you have both ODL and ONOS installed in the same host computer, then you must change the UI port for either ODL or ONOS. For example, the ONOS UI port can be changed to 8182. Also, it is necessary to change the openflow port numbers in the topology files as well as SDN controller's configuraiton files for either ODL or ONOS, for example, one port can be 6654 while the other 6653. Besides, distinct host names and IP addresses are necessary to be used in mininet topology files ("diamond_topology.py") for ODL and ONOS so that same host name or IP are not used in both ODL and ONOS.
 
@@ -196,6 +196,13 @@ http://localhost:8181/onos/ui/login.html
 
 username: onos
 password: rocks
+
+```
+# Ryu
+```
+```
+# Floodlight
+```
 ```
 # Installing Mininet
 ```
@@ -236,6 +243,12 @@ ODL_End-to_End_IBN_Main.ipynb file is the main file for running the NetIntent on
 Open the file in jupyter notebook. Make sure the Ollama server is running. Also, you need to provide the host PC's user account password in the variable 'sudo_password' so that the script can execute mininet commands to install flow rules in the SDN controller. Moreover, check the "extract_host_and_ip_odl" function and cross check 'ip_to_host' mapping so that it matches the mapping of corresponding 'diamond_topology.py' file. Make sure 'ODL_BASE_URL' variable is set to correct ODL path for using the Rest API, especially the UI port number. The IP here is the local ip. Even 'localhost' can be used instead of IP address. You can change the LLM used for translation and conflict detection using the variables 'my_models'. Make sure the model names are correctly written. The model name depends on how it is saved by Ollama in the host PC. The variable 'context_examples' can be modified to meet desired accuracy as more context example helps achieved better accuracy, but with increased latency. The 'default_model' variable uses a model name to do the embeddings to ensure that all similarity calculations are reliable while selecting context examples. It is not used for translation or conflict detection. Make sure the Intent2Flow-ODL dataset path is correcly set in variable 'custom_dataset'.
 
 As you run the script, it will ask for an intent. Type an intent and it will be translated and deployed in the SDN controller switch if there are no errors, such as conflicts. If case of an error, error information will be printed. Some sample intents are available in the script in main function.
+```
+# Ryu
+```
+```
+# Floodlight
+```
 
 ```
 # Reference
