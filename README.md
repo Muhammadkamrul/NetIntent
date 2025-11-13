@@ -284,10 +284,11 @@ As you run the script, it will ask for an intent. Type an intent and it will be 
 ```
 # Ryu
 ```
+Similar to ODL and ONOS
 ```
 # Floodlight
 ```
-
+Similar to ODL and ONOS
 ```
 # Reference
 ```
