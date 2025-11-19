@@ -6,10 +6,10 @@ ArXiv paper link: https://doi.org/10.48550/arXiv.2507.14398
 # Benchmarking
 
 # How to install the dependencies
-Run these commands in your linux terminal to create a new conda environment named 'odlonos'. Make sure you are in the directory where the 'environment.yml' file is available.
+Run these commands in your linux terminal to create a new conda environment named 'netintent'. Make sure you are in the directory where the 'environment.yml' file is available.
 ```
 conda env create -f environment.yml
-conda activate odlonos
+conda activate netintent
 ```
 
 The version we used:
