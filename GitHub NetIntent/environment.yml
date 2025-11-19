@@ -1,4 +1,4 @@
-name: odlonos
+name: netintent
 channels:
   - pytorch
   - nvidia
