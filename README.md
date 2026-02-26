@@ -1,7 +1,8 @@
 # NetIntent: Leveraging Large Language Models for End-to-End Intent-Based SDN Automation
-Submitted to IEEE Open Journal of the Communications Society (OJ-COMS)
+Published in IEEE Open Journal of the Communications Society (OJ-COMS)
 
-ArXiv paper link: https://doi.org/10.48550/arXiv.2507.14398
+Journal paper link: https://ieeexplore.ieee.org/document/11293797
+Arxiv paper link: https://arxiv.org/abs/2507.14398
 
 # Benchmarking
 
@@ -294,12 +295,16 @@ Similar to ODL and ONOS
 ```
 Our dataset is free to download. However, please cite our paper accordingly, the bibtext is as follows.
 
-@article{hossain2025netintent,
-  title={NetIntent: Leveraging Large Language Models for End-to-End Intent-Based SDN Automation},
-  author={Hossain, Md Kamrul and Aljoby, Walid},
-  journal={arXiv preprint arXiv:2507.14398},
-  year={2025}
-}
+@ARTICLE{11293797,
+  author={Hossain, Md. Kamrul and Aljoby, Walid},
+  journal={IEEE Open Journal of the Communications Society}, 
+  title={NetIntent: Leveraging Large Language Models for End-to-End Intent-Based SDN Automation}, 
+  year={2025},
+  volume={6},
+  number={},
+  pages={10512-10541},
+  keywords={Translation;Benchmark testing;Natural languages;Large language models;Automation;Switches;Software defined networking;Pipelines;Quality of service;Manuals;Intent-based networking;software-defined network;large language models},
+  doi={10.1109/OJCOMS.2025.3642642}}
 ```
 
 
